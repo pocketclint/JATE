@@ -20,13 +20,16 @@ module.exports = () => {
         template: './index.html',
       }),
       new WebpackPwaManifest({
-        name: 'JATE',
+        inject: true,
+        fingerprints: false,
+        name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'JATE is a journaling app that allows you to track your thoughts and feelings.',
         background_color: '#01579b',
         theme_color: '#ffffff',
         'theme-color': '#ffffff',
         start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
